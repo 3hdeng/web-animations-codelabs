@@ -8,7 +8,7 @@ body {
 .path {
   stroke-dasharray: 1000;
   stroke-width:4;
-  stroke:#ff000;
+  stroke:#ff0000;
 }
 .cdot {
   border-radius: 1000px; /* i.e., a 'large' value */
