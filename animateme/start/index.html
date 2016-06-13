@@ -3,15 +3,36 @@
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link href="site.css" rel="stylesheet" type="text/css" />
+  <script src="webanimae.min.js"></script>
   <script>
 window.addEventListener('load', function() {
   // Your code here!
+   var dot = document.querySelector('.dot');
+  var frames = [
+    {transform: 'rotate(0deg) translate(180px) '},
+    {transform: 'rotate(360deg) translate(180px)'},
+  ];
+  
+   dot.animate(frames, 10000);
+   
+   var opaFromTo=[
+        {opacity: 0.5, transform: "scale(0.3)"},
+        {opacity: 1.0, transform: "scale(1.5)"}
+    ];
+    var opaDuratioLoop={
+        direction: 'alternate',
+        duration: 1000,
+        iterations: Infinity
+    };
+    var cdot = document.querySelector('.cdot');
+    cdot.animate(opaFromTo, opaDuratioLoop);
 });
   </script>
 </head>
 <body>
 
 <div class="dots">
+  <div class="cdot"></div>
   <div class="dot"></div>
 </div>
 
