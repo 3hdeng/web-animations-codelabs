@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link href="site.css" rel="stylesheet" type="text/css" />
-  <script src="webanimae.min.js"></script>
+  <script src="webanimate.min.js"></script>
   <script>
 window.addEventListener('load', function() {
   // Your code here!
@@ -13,7 +13,15 @@ window.addEventListener('load', function() {
     {transform: 'rotate(360deg) translate(180px)'},
   ];
   
-   dot.animate(frames, 10000);
+  // dot.animate(frames, 10000);
+   var timing = {
+    duration: 2500,
+    iterations: Infinity,
+    direction: 'alternate',
+    easing: 'ease-in-out',
+  };
+  dot.animate(frames,timing);
+  
    
    var opaFromTo=[
         {opacity: 0.5, transform: "scale(0.3)"},
